@@ -6,6 +6,14 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site:'https://Notand105.github.io',
-  base:'/astro-first-project'
+  base:'/astro-first-project',
+  //extra to try to read the images from puclic
+  buildOptions:{
+    site:{
+      assets:[
+        "public"
+      ]
+    }
+  }
 
 });
